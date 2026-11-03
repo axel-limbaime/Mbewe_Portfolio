@@ -1,3 +1,5 @@
+import React from 'react';
+
 // Personnalisez ici votre profil, vos compétences et vos projets.
 const profile = {
   name: 'Mbewe',
