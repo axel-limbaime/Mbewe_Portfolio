@@ -1,1 +1,41 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+@use 'tailwindcss';
+
+:root {
+  --color-background: #F8F7F3;
+  --color-surface: #FFFFFF;
+  --color-text: #252521;
+  --color-muted: #77756F;
+  --color-accent: #B18A66;
+
+  --font-body: 'Inter', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--color-background);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--color-accent);
+  color: white;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
