@@ -1,0 +1,21 @@
+:host { display: block; }
+
+.site-footer { border-top: 1px solid var(--pf-border); }
+
+.site-footer__inner {
+  width: min(100% - var(--pf-gutter) * 2, 1440px);
+  min-height: 86px;
+  margin-inline: auto;
+}
+
+.brand { font-size: 1rem; }
+p { margin: 0; color: var(--pf-muted); font-size: 0.8rem; }
+
+@media (max-width: 639px) {
+  .site-footer__inner {
+    padding-block: 1.5rem;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+}

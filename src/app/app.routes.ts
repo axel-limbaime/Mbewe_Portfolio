@@ -1,36 +1,27 @@
 import { Routes } from '@angular/router';
+import { Home } from './features/home/home';
 
 export const routes: Routes = [
   {
     path: '',
-    title: 'Accueil | Portfolio',
-    loadComponent: () =>
-      import('./features/home/home')
-        .then(m => m.Home),
+    pathMatch: 'full',
+    component: Home,
+    title: 'Michèle Ariane — Product Owner · UX · Data',
   },
   {
     path: 'projets',
-    title: 'Projets | Portfolio',
-    loadComponent: () =>
-      import('./features/projects/projects')
-        .then(m => m.Projects),
+    loadComponent: () => import('./features/projects/projects').then((m) => m.Projects),
+    title: 'Projets — Michèle Ariane',
   },
   {
     path: 'parcours',
-    title: 'Parcours | Portfolio',
-    loadComponent: () =>
-      import('./features/journey/journey')
-        .then(m => m.Journey),
+    loadComponent: () => import('./features/journey/journey').then((m) => m.Journey),
+    title: 'Parcours — Michèle Ariane',
   },
   {
     path: 'contact',
-    title: 'Contact | Portfolio',
-    loadComponent: () =>
-      import('./features/contact/contact')
-        .then(m => m.Contact),
+    loadComponent: () => import('./features/contact/contact').then((m) => m.Contact),
+    title: 'Contact — Michèle Ariane',
   },
-  {
-    path: '**',
-    redirectTo: '',
-  },
+  { path: '**', redirectTo: '' },
 ];
